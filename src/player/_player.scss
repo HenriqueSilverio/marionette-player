@@ -27,6 +27,13 @@ body {
     border: 0;
     border-radius: 100%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.19);
+    &:hover {
+        color: #333;
+        &:active {
+            background-color: #666;
+            box-shadow: none;
+        }
+    }
 }
 
 .btn-play {
@@ -48,7 +55,7 @@ body {
 
 .btn-control {
     position: absolute;
-    font-size: 18px;
+    font-size: 22px;
     font-family: serif;
 }
 
