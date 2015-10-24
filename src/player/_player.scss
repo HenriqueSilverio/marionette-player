@@ -1,3 +1,75 @@
-* {
-    color: green;
+body {
+    position: relative;
+    background: linear-gradient(135deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
+    -moz-background: linear-gradient(-45deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
+    -webkit-background: gradient(left top, right bottom, color-stop(0%, rgba(116,143,184,1)), color-stop(100%, rgba(196,115,158,1)));
+
+}
+
+
+.player-container {
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 25%);
+    -moz-transform: translate(-50%, 25%);
+    -webkit-transform: translate(-50%, 25%);
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: rgba(255,255,255,0.5);
+}
+
+.btn {
+
+    border-radius: 100%;
+    border: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.19);
+
+}
+
+.btn-play {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    font-size: 40px;
+
+    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.btn-control {
+    font-size: 22px;
+    position: absolute;
+    font-family: serif;
+}
+
+.btn-control_prev {
+    left: 40px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-control_next {
+    right: 40px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-control_mute {
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
 }
