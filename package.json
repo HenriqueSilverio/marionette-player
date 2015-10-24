@@ -4,7 +4,7 @@
   "description": "A audio player built with Marionette.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HenriqueSilverio/marionetteify.git"
+    "url": "git@github.com:HenriqueSilverio/marionette-player.git"
   },
   "keywords": [
     "backbone",
@@ -14,10 +14,11 @@
   "author": "Henrique Silverio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HenriqueSilverio/marionetteify/issues"
+    "url": "https://github.com/HenriqueSilverio/marionette-player/issues"
   },
-  "homepage": "https://github.com/HenriqueSilverio/marionetteify",
+  "homepage": "https://github.com/HenriqueSilverio/marionette-player",
   "devDependencies": {
+    "babel": "^5.8.23",
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
     "grunt": "^0.4.5",
