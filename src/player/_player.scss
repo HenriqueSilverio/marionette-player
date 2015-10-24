@@ -1,55 +1,54 @@
 body {
-    position: relative;
     background: linear-gradient(135deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
     -moz-background: linear-gradient(-45deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
     -webkit-background: gradient(left top, right bottom, color-stop(0%, rgba(116,143,184,1)), color-stop(100%, rgba(196,115,158,1)));
-
 }
 
-
 .player-container {
-    width: 320px;
-    height: 400px;
+
     position: absolute;
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, 25%);
-    -moz-transform: translate(-50%, 25%);
-    -webkit-transform: translate(-50%, 25%);
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+    width: 320px;
+    height: 400px;
 
     border-radius: 8px;
-
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     background-color: rgba(255,255,255,0.5);
+
 }
 
 .btn {
-
-    border-radius: 100%;
     border: 0;
+    border-radius: 100%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.19);
-
 }
 
 .btn-play {
-    width: 80px;
-    height: 80px;
-    position: absolute;
 
+    position: absolute;
     left: 50%;
     bottom: 20px;
-
-    font-size: 40px;
 
     transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
+
+    width: 80px;
+    height: 80px;
+
+    font-size: 20px;
+
 }
 
 .btn-control {
-    font-size: 22px;
     position: absolute;
+    font-size: 18px;
     font-family: serif;
 }
 
