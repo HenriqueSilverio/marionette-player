@@ -8,6 +8,11 @@ module.exports = function() {
     scripts: {
       files: ['<%= paths.src.base %>/**/*.js'],
       tasks: ['jscs:dist', 'jshint:dist', 'browserify:dist']
+    },
+
+    handlebars: {
+      files: ['<%= paths.src.base %>/**/*.hbs'],
+      tasks: ['browserify:dist']
     }
   };
 };
