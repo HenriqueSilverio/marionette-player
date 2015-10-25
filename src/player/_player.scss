@@ -2,6 +2,10 @@ body {
     background: linear-gradient(135deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
 }
 
+button {
+    cursor: pointer;
+}
+
 .player-container {
 
     position: absolute;
