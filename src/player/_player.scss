@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(135deg, rgba(116,143,184,1) 0%, rgba(196,115,158,1) 100%);
+}
+
+button {
+    cursor: pointer;
+}
+
+.player-container {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    height: 400px;
+
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: rgba(255,255,255,0.5);
+
+}
+
+.btn {
+    border: 0;
+    border-radius: 100%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.19);
+    &:hover {
+        color: #333;
+        &:active {
+            background-color: rgba(255,255,255,0.3);
+            box-shadow: none;
+            border: solid 1px;
+            border-color: rgba(0,0,0,0.2);
+        }
+    }
+}
+
+.btn-play {
+
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    width: 80px;
+    height: 80px;
+
+    font-size: 20px;
+
+}
+
+.btn-control {
+    position: absolute;
+    font-size: 22px;
+    font-family: serif;
+}
+
+.btn-control_prev {
+    left: 40px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-control_next {
+    right: 40px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.btn-control_mute {
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.song {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.song-name {
+    transform: translate(-50%, -70%);
+
+    width: 200px;
+    height: 26px;
+
+    font-size: 20px;
+    font-family: sans-serif;
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.song-band {
+    transform: translate(-50%, 100%);
+
+    width: 200px;
+    height: 28px;
+
+    font-size: 16px;
+    font-family: sans-serif;
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.artist-img {
+    width: 220px;
+    border-radius: 50%;
+    border: solid 8px;
+    border-color: rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.19);
+}
