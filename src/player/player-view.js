@@ -6,17 +6,17 @@ const PlayerView = ItemView.extend({
   template: template,
 
   ui: {
-    'btnVolume': '.btn-control_mute i',
-    'btnPlaying': '.btn-play i',
-    'btnPrev': '.btn-control_prev',
-    'btnNext': '.btn-control_next'
+    'iconVolume'  : '.btn--mute i',
+    'iconPlaying' : '.btn--play i',
+    'btnPrev'     : '.btn--prev',
+    'btnNext'     : '.btn--next'
   },
 
   events: {
-    'click .btn-control_mute': 'toggleMute',
-    'click .btn-play': 'togglePlaying',
-    'click @ui.btnPrev': 'goPrev',
-    'click @ui.btnNext': 'goNext'
+    'click .btn--play'  : 'togglePlaying',
+    'click .btn--mute'  : 'toggleMute',
+    'click @ui.btnPrev' : 'goPrev',
+    'click @ui.btnNext' : 'goNext'
   },
 
   initialize() {
@@ -28,29 +28,31 @@ const PlayerView = ItemView.extend({
 
     this.audio     = document.createElement('audio');
     this.audio.src = firstSong.get('url');
+
+    this.audio.addEventListener('ended', this.goNext);
   },
 
   toggleMute() {
     let isMute    = this.model.get('mute');
-    let iconClass = isMute ? 'fa-volume-up' : 'fa-volume-off';
+    let iconClass = isMute ? 'volume-up' : 'volume-off';
 
     this.audio.volume = isMute ? 1 : 0;
 
-    this.ui.btnVolume.removeClass()
-                     .addClass(`fa ${iconClass}`);
+    this.ui.iconVolume.removeClass()
+                     .addClass(`icon-${iconClass}`);
 
     this.model.set('mute', !isMute);
   },
 
   play() {
     this.model.set('playing', true);
-    this.ui.btnPlaying.removeClass('fa-play').addClass('fa-pause');
+    this.ui.iconPlaying.removeClass('icon-play').addClass('icon-pause');
     this.audio.play();
   },
 
   pause() {
     this.model.set('playing', false);
-    this.ui.btnPlaying.removeClass('fa-pause').addClass('fa-play');
+    this.ui.iconPlaying.removeClass('icon-pause').addClass('icon-play');
     this.audio.pause();
   },
 
@@ -63,11 +65,9 @@ const PlayerView = ItemView.extend({
     let total   = this.model.get('total');
     let current = this.model.get('current');
     let goTo    = current > 0 ? current - 1 : total;
-
-    let song = this.collection.at(goTo);
+    let song    = this.collection.at(goTo);
 
     this.model.set('current', goTo);
-
     this.audio.src = song.get('url');
     this.play();
   },
@@ -76,11 +76,9 @@ const PlayerView = ItemView.extend({
     let total   = this.model.get('total');
     let current = this.model.get('current');
     let goTo    = current < total ? current + 1 : 0;
-
-    let song = this.collection.at(goTo);
+    let song    = this.collection.at(goTo);
 
     this.model.set('current', goTo);
-
     this.audio.src = song.get('url');
     this.play();
   }

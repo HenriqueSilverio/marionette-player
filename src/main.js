@@ -6,15 +6,15 @@ import Songs from './player/songs';
 import Player from './player/player';
 
 let data = [{
-  url: '/audio/01.mp3',
+  url: 'https://copy.com/TpMTcGdbSmx6ctnO?download=1',
   title: 'The Unforgiven II',
   artist: 'Metallica'
 }, {
-  url: '/audio/02.mp3',
+  url: 'https://copy.com/7iRRqLIZWvr7xp7T?download=1',
   title: 'Highway To Hell',
   artist: 'AC/DC'
 }, {
-  url: '/audio/03.mp3',
+  url: 'https://copy.com/YjEedRpiauB6y0Zn?download=1',
   title: 'Whiskey In The Jar',
   artist: 'Metallica'
 }];

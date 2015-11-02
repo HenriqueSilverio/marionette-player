@@ -38,7 +38,10 @@
 .icon-pause:before {
 	content: "\f04c";
 }
+.icon-play:before,
+.icon-pause:before {
+  font-size: 2em;
+}
 .icon-forward:before {
 	content: "\f04e";
 }
-
