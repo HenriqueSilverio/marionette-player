@@ -2,8 +2,12 @@ import {Application} from 'backbone.marionette';
 import PlayerView from './player-view';
 
 const Player = Application.extend({
-  initialize() {
-    this.layout = new PlayerView();
+  initialize(options = {}) {
+    this.layout = new PlayerView({
+      model: options.model,
+      collection: options.collection
+    });
+
     this.layout.render();
   }
 });
