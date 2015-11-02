@@ -19,13 +19,6 @@ module.exports = function() {
           flatten: true,
           src: '<%= paths.src.base %>/player/images/*',
           dest: '<%= paths.dist.base %>/images'
-        },
-
-        {
-          expand: true,
-          flatten: true,
-          src: '<%= paths.src.base %>/player/audio/*',
-          dest: '<%= paths.dist.base %>/audio'
         }
       ]
     }
