@@ -9,7 +9,10 @@ const PlayerView = ItemView.extend({
     'iconVolume'  : '.btn--mute i',
     'iconPlaying' : '.btn--play i',
     'btnPrev'     : '.btn--prev',
-    'btnNext'     : '.btn--next'
+    'btnNext'     : '.btn--next',
+    'songName'    : '.song__name',
+    'songArtist'  : '.song__artist',
+    'songCover'   : '.song__cover'
   },
 
   events: {
@@ -29,7 +32,26 @@ const PlayerView = ItemView.extend({
     this.audio     = document.createElement('audio');
     this.audio.src = firstSong.get('url');
 
+    this.listenTo(this.model, 'change:current', this.onSongChange);
     this.audio.addEventListener('ended', this.goNext);
+  },
+
+  templateHelpers() {
+    let firstSong = this.collection.at(0);
+
+    return {
+      cover: firstSong.get('cover'),
+      title: firstSong.get('title'),
+      artist: firstSong.get('artist')
+    };
+  },
+
+  onSongChange(state) {
+    let current = this.collection.at(state.get('current'));
+
+    this.ui.songName.html(current.get('title'));
+    this.ui.songCover.attr('src', current.get('cover'));
+    this.ui.songArtist.html(current.get('artist'));
   },
 
   toggleMute() {

@@ -8,15 +8,18 @@ import Player from './player/player';
 let data = [{
   url: 'https://copy.com/TpMTcGdbSmx6ctnO?download=1',
   title: 'The Unforgiven II',
-  artist: 'Metallica'
+  artist: 'Metallica',
+  cover: '/images/01.jpg'
 }, {
   url: 'https://copy.com/7iRRqLIZWvr7xp7T?download=1',
   title: 'Highway To Hell',
-  artist: 'AC/DC'
+  artist: 'AC/DC',
+  cover: '/images/02.jpg'
 }, {
   url: 'https://copy.com/YjEedRpiauB6y0Zn?download=1',
   title: 'Whiskey In The Jar',
-  artist: 'Metallica'
+  artist: 'Metallica',
+  cover: '/images/03.jpg'
 }];
 
 let playlist = new Songs(data);
