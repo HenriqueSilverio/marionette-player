@@ -33,7 +33,7 @@ const PlayerView = ItemView.extend({
     this.audio.src = firstSong.get('url');
 
     this.listenTo(this.model, 'change:current', this.onSongChange);
-    this.audio.addEventListener('ended', this.goNext);
+    this.audio.addEventListener('ended', this.goNext.bind(this));
   },
 
   templateHelpers() {
