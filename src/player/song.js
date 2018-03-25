@@ -1,12 +1,12 @@
-import {Model} from 'backbone';
+import { Model } from 'backbone';
 
 const Song = Model.extend({
   defaults() {
     return {
-      url: '',
-      cover: '',
-      title: '',
-      artist: ''
+      url   : '',
+      cover : '',
+      title : '',
+      artist: '',
     };
   }
 });

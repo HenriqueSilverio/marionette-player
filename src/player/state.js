@@ -1,12 +1,12 @@
-import {Model} from 'backbone';
+import { Model } from 'backbone';
 
 const State = Model.extend({
   defaults() {
     return {
-      mute: false,
-      total: 0,
+      mute   : false,
+      total  : 0,
       current: 0,
-      playing: false
+      playing: false,
     };
   }
 });

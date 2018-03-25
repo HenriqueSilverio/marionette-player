@@ -1,21 +1,14 @@
 # Build files
-
 dist
 .sass-cache
 
-
 # Sublime Text
-
 *.sublime-*
 
-
 # NPM
-
 node_modules
 
-
 # OSX
-
 *._*
 .DS_Store
 .LSOverride

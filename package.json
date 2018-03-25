@@ -1,6 +1,6 @@
 {
   "name": "marionette-player",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A audio player built with Marionette.js",
   "repository": {
     "type": "git",
@@ -9,7 +9,8 @@
   "keywords": [
     "backbone",
     "marionette",
-    "browserify"
+    "browserify",
+    "audio player"
   ],
   "author": "Henrique Silverio",
   "license": "MIT",
@@ -18,27 +19,23 @@
   },
   "homepage": "https://github.com/HenriqueSilverio/marionette-player",
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babelify": "^6.3.0",
-    "browserify": "^11.2.0",
-    "grunt": "^0.4.5",
-    "grunt-browser-sync": "^2.1.3",
-    "grunt-browserify": "^4.0.1",
-    "grunt-contrib-copy": "^0.8.1",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-jscs": "^2.1.0",
-    "grunt-sass": "^1.0.0",
-    "hbsfy": "^2.3.1",
-    "load-grunt-configs": "^0.4.3",
-    "load-grunt-tasks": "^3.3.0",
-    "uglifyify": "^3.0.1"
-  },
-  "dependencies": {
-    "backbone": "^1.2.3",
-    "backbone.marionette": "^2.4.3",
-    "handlebars": "^4.0.3",
-    "jquery": "^2.1.4",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "backbone": "^1.3.3",
+    "backbone.marionette": "^3.5.1",
+    "browserify": "^16.1.1",
+    "handlebars": "^4.0.11",
+    "hbsfy": "^2.8.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.8.3",
+    "uglifyify": "^4.0.5",
     "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "build-css": "node-sass --output-style compressed src/main.scss dist/bundle.css",
+    "build-js": "browserify -t [ babelify --presets [ env ] ] -t hbsfy -t uglifyify src/main.js -o dist/bundle.js",
+    "copy": "cp -a src/player/fonts dist/fonts && cp -a src/player/images dist/images && cp -a src/index.html dist/index.html",
+    "build": "rm -R dist && npm run build-css && npm run build-js && npm run copy"
   }
 }
